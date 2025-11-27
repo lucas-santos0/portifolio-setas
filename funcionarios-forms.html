@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head> 
+		<title> cadastro de funcionario</title>
+		<meta charset="utf-8">
+		<script language="javascript" type="text/javascript">
+		function validar(){
+		var nome = form1.nome.value;
+		var endereco = form1.endereco.value;
+		var telefone = form1.telefone.value;
+		
+		if (nome == ""){
+		alert('por favor, preencha o campo seu nome completo!!');
+		form1.nome.focus();
+		return false;
+		}
+		
+		if (endereco == ""){
+		alert('por favor, preencha o campo com o seu endereço!!');
+		form1.endereco.focus();
+		return false;
+		}
+		
+		if (telefone == ""){
+		alert('por favor, preencha o campo com o seu telefone!!');
+		form1.telefone.focus();
+		return false;
+		}		
+		
+	}
+		</script>
+	</head>
+	<body bgcolor="lightblue">
+	<img src="imagem/voltar.png" width="2%">
+		<center><br><center><h1>cadastro de funcionario</h1></center><hr><br><br>
+			<form name="form1" action="Aviso-funcionarios.html" method="post">
+				Nome <input type="text" name="nome"><br><br>
+				endereço <input type="text" name="endereco"><br><br>
+				telefone <input type="number" name="telefone"><br><br>
+				Cidade <select name="cidade">
+				<option>Hortolandia
+				<option>Campinas
+				<option>Sumaré
+				<option>Paulínia
+				<option>Monte mor
+				</select><br><br>
+			<textarea cols="50" rows="15" name="comentario"> Obs...</textarea><br><br><br>
+			<input type="submit" onclick="return validar()" value="Enviar">
+			<input type="reset" name="limpa" value="Limpar">
+		</form></center>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head> 
+		<title> cadastro de cliente</title>
+		<meta charset="utf-8">
+		<script language="javascript" type="text/javascript">
+		function validar(){
+		var nome = form1.nome.value;
+		var endereco = form1.endereco.value;
+		var telefone = form1.telefone.value;
+		var CPF = form1.CPF.value;
+		
+		if (nome == ""){
+		alert('por favor, preencha o campo seu nome completo!!');
+		form1.nome.focus();
+		return false;
+		}
+		
+		if (CPF == ""){
+		alert('por favor, preencha o campo com o seu CPF!!');
+		form1.CPF.focus();
+		return false;
+		}		
+		
+		if (endereco == ""){
+		alert('por favor, preencha o campo com o seu endereço!!');
+		form1.endereco.focus();
+		return false;
+		}		
+		
+		if (telefone == ""){
+		alert('por favor, preencha o campo com o seu telefone!!');
+		form1.telefone.focus();
+		return false;
+		}		
+		
+		
+	}
+		</script>
+	</head>
+	<body bgcolor="yellow">
+	<img src="imagem/voltar.png" width="2%">
+		<center><br><center><h1>cadastro de cliente</h1></center><br><br>
+			<form name="form1" action="Aviso-clientes.html" method="post">
+				Nome <input type="text" name="nome"><br/><br/>
+				CPF <input type="number" name="CPF"><br/><br/>
+				endereço <input type="text" name="endereco"><br/><br/>
+				telefone <input type="number" name="telefone"><br/><br/>
+			<textarea cols="50" rows="15" name="comentario"> Obs...</textarea><br><br><br>
+			<input type="submit" onclick="return validar()" value="Enviar">
+			<input type="reset" name="limpa" value="Limpar">
+		</form></center>
+	</body>
+</html>

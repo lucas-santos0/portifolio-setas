@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head> 
+		<title> cadastro de produtos</title>
+		<meta charset="utf-8">
+		<script language="javascript" type="text/javascript">
+		function validar(){
+		var nome = form1.nome.value;
+		var local = form1.local.value;
+		
+		if (nome == ""){
+		alert('por favor, preencha o campo com o nome do produto!!');
+		form1.nome.focus();
+		return false;
+		}
+	
+		if (local == ""){
+		alert('por favor, preencha o campo com o endereço da loja onde o produto foi comprado!!');
+		form1.local.focus();
+		return false;
+		}		
+	}
+		</script>
+	</head>
+	<body bgcolor="lightpink">
+		<img src="imagem/voltar.png" width="2%">
+		<center><br><center><h1>cadastro de produtos</h1></center><br><br>
+			<form name="form1" action="Aviso-produtos.html" method="post">
+				Nome do produto<input type="text" name="nome"><br/><br/>
+				codigo do produto <input type="number" name="codigo"><br/><br/>
+				data da compra <input type="date" name="data"><br/><br/>
+				local da compra <input type="text" name="local"><br/><br/>
+				quantidade <input type="number" name="quantidade" ><br/><br/>
+			<textarea cols="50" rows="15" name="comentario"> Obs...</textarea><br><br><br>
+			<input type="submit" onclick="return validar()" value="Enviar">
+			<input type="reset" name="limpa" value="Limpar">
+		</form></center>
+	</body>
+</html>
